@@ -161,6 +161,7 @@ initializing."
               ("Head" -1 t)
               ]))))
 
+;;;###autoload
 (defun git-worktree-open (&optional directory)
   "Open git worktree list buffer.
 
@@ -169,6 +170,7 @@ initializing."
   (interactive)
   (let ((bf (git-worktree-open-noselect directory)))
     (pop-to-buffer bf)))
+;;;###autoload
 (defalias 'git-worktree 'git-worktree-open)
 
 (defun git-worktree-mode-go ()
